@@ -10,6 +10,7 @@
 	"license": "proprietary",
 	"name": "mell",
 	"versions": [
+		"SDL_2022",
 		"SDL_Image",
 		"SDL_TTF",
 		"SDL_Mixer"

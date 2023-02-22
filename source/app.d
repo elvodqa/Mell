@@ -7,30 +7,43 @@ SDL_Renderer* renderer;
 
 Text debugText;
 float elapsed = 0;
+int defaultFontSize = 14;
 
 void main()
 {
 	init_everything();
-	
+	  
+	version (OSX){
+		auto flags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED | SDL_WINDOW_ALLOW_HIGHDPI;
+		defaultFontSize = 28;
+	} else {
+		auto flags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED;
+		defaultFontSize = 14;
+	}
+
 	auto window = SDL_CreateWindow(
 		"Mell",
 		SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED,
 		1200, 720,	
-		SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED
+		flags
 	);
-
+	
 	if (!window) {
 		throw new Exception("Failed to create window");
 	}
+	SDL_SetWindowMinimumSize(window, 1024, 768);
 
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 	if (!renderer) {
 		throw new Exception("Failed to create renderer");
 	}
 
-	debugText = new Text("Screen: ", "assets/fonts/OpenSans-Regular.ttf", 14, 2, 0, Alignment.Left);
-		
+	debugText = new Text("Screen: ", "assets/fonts/OpenSans-Regular.ttf", defaultFontSize, 2, 0, Alignment.Left);	
+	
+	SDL_RendererInfo info;
+	SDL_GetRendererInfo(renderer, &info);
+	writeln("Renderer: ", info.name);
 	
 	SDL_SetRenderDrawColor(renderer, 88, 85, 83, 255);
 	bool running = true;

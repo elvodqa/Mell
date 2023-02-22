@@ -1,0 +1,17 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/mell
+/bin
+mell.so
+mell.dylib
+mell.dll
+mell.a
+mell.lib
+mell-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst

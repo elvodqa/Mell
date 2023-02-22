@@ -1,0 +1,20 @@
+{
+	"authors": [
+		"Emir"
+	],
+	"copyright": "Copyright © 2023, Emir",
+	"dependencies": {
+		"bindbc-sdl": "~>1.2.4"
+	},
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "mell",
+	"versions": [
+		"SDL_Image",
+		"SDL_TTF",
+		"SDL_Mixer"
+	],
+	"targetPath": "bin",
+	"copyFiles": [
+		"assets"]
+}

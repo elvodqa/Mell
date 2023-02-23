@@ -3,6 +3,7 @@ docs.json
 __dummy.html
 docs/
 /mell_editor
+/bin
 mell_editor.so
 mell_editor.dylib
 mell_editor.dll

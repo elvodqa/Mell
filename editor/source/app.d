@@ -49,7 +49,7 @@ void main()
 		throw new Exception("Failed to create renderer");
 	}
 
-	debugText = new Text("Screen: ", "assets/fonts/OpenSans-Regular.ttf", defaultFontSize, 2, 0, Alignment.Left);	
+	debugText = new Text("Screen: ", "./assets/fonts/OpenSans-Regular.ttf", defaultFontSize, 2, 0, Alignment.Left);	
 	
 	
 	SDL_RendererInfo info;
@@ -81,6 +81,11 @@ void main()
 							break;
 						default:
 							break;
+					}
+					break;
+				case SDL_MOUSEBUTTONUP:
+					if (event.button.button == 3) {
+						debugMode = !debugMode;
 					}
 					break;
 				default:

@@ -1,0 +1,1 @@
+dub build && cd bin && mell_editor.exe && cd ..

@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/mell_editor
+mell_editor.so
+mell_editor.dylib
+mell_editor.dll
+mell_editor.a
+mell_editor.lib
+mell_editor-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst

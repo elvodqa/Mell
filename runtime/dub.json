@@ -16,6 +16,12 @@
 		"SDL_Mixer"
 	],
 	"targetPath": "bin",
-	"copyFiles": [
-		"assets"]
+	"sourcePaths": [
+		"./source",
+		"./../mell/source/mell"
+	],
+	"copyFiles": 
+	[
+		"../mell/assets"
+	]
 }

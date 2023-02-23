@@ -1,0 +1,19 @@
+{
+	"authors": [
+		"Emir Cengiz"
+	],
+	"copyright": "Copyright © 2023, Emir Cengiz",
+	"description": "Library",
+	"license": "proprietary",
+	"name": "mell",
+	"dependencies": {
+		"bindbc-sdl": "~>1.2.4"
+	},
+	"versions": [
+		"SDL_2022",
+		"SDL_Image",
+		"SDL_TTF",
+		"SDL_Mixer"
+	],
+	"targetPath": "bin"
+}

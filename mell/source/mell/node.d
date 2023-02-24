@@ -1,6 +1,4 @@
-module editor.node;
-
-import mell.geometry.rectangle;
+module mell.node;
 
 enum NodeType {
     BEGIN,
@@ -14,6 +12,8 @@ enum NodeType {
 
 class Node {
     int id;
+    NodeType type;
+    Node[] children;
 }
 
 class BeginNode : Node {
@@ -44,6 +44,5 @@ class DialogNode : Node {
 class ChoiceNode : Node {
     string text;
     string[] options;
-    int[] targets;
 }
 
